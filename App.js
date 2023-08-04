@@ -32,6 +32,7 @@ export default function App() {
       <Button title="Enviar" onPress={handle}/>
 
       <Text>{result}</Text>
+      <Button title="no tengo cuenta"/>
     </View>
   );
 }
