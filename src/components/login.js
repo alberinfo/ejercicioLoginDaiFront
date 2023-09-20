@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { StyleSheet, Button, Text, View } from 'react-native';
 import { TextInput } from 'react-native-web';
 import { useNavigation } from '@react-navigation/native';
-
+import userContext from '../../context';
 
 function Login() {
     const navigation = useNavigation();
@@ -11,22 +11,25 @@ function Login() {
     const [user, setUser] = useState("");
     const [pwd, setPwd] = useState("");
     const [result, setResult] = useState("");
-  
+
+    const context = useContext(userContext);
+
     async function handle(){
       try { 
         const resp = await axios.post("http://localhost:8080/login", {
           name: user,
           pwd: pwd
         });
-        setResult("OK");
+
+        console.log(resp);
+
+        context.setUsuario({name: user, sessionId: resp.data});
+
+        navigation.navigate("Home");
       } catch (e) {
         setResult("Usuario o contraseña incorrectas");
       }
     }
-  
-    useEffect(() => {
-      console.log("???????", result);
-    }, [result])
   
     return (
       <View style={styles.container}>
