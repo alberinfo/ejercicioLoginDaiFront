@@ -13,9 +13,11 @@ export default function App() {
   const [usuario, setUsuario] = useState({});
   const [perfil, setPerfil] = useState({});
 
+  const [reloadPage, setReload] = useState(false);
+
   return(
     <NavigationContainer>
-      <userContext.Provider value={{usuario, setUsuario, perfil, setPerfil}}>
+      <userContext.Provider value={{usuario, setUsuario, perfil, setPerfil, reloadPage, setReload}}>
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login}/>
           <Stack.Screen name="Registro" component={Registro}/>
