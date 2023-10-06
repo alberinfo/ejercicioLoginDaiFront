@@ -22,8 +22,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -81,20 +79,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `alberinfo`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 ### Built With
 
 * [![React Native][React-native.js]][React-native-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -141,7 +130,7 @@ Lastly, in order to have the best experience, we recommend utilizing our <a href
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To be honest, this has no use. Go on with your life, dear reader.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -165,7 +154,7 @@ See the [open issues](https://github.com/alberinfo/ejercicioLoginDaiFront/issues
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - albertocuch@gmail.com
 
 Project Link: [https://github.com/alberinfo/ejercicioLoginDaiFront](https://github.com/alberinfo/ejercicioLoginDaiFront)
 
@@ -186,18 +175,14 @@ Project Link: [https://github.com/alberinfo/ejercicioLoginDaiFront](https://gith
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/alberinfo/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/alberinfo/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alberinfo/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/alberinfo/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/alberinfo/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/alberinfo/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/alberinfo/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/alberinfo/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/alberinfo/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/alberinfo/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[contributors-shield]: https://img.shields.io/github/contributors/alberinfo/ejercicioLoginDaiFront.svg?style=for-the-badge
+[contributors-url]: https://github.com/alberinfo/ejercicioLoginDaiFront/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alberinfo/ejercicioLoginDaiFront.svg?style=for-the-badge
+[forks-url]: https://github.com/alberinfo/ejercicioLoginDaiFront/network/members
+[stars-shield]: https://img.shields.io/github/stars/alberinfo/ejercicioLoginDaiFront.svg?style=for-the-badge
+[stars-url]: https://github.com/alberinfo/ejercicioLoginDaiFront/stargazers
+[issues-shield]: https://img.shields.io/github/issues/alberinfo/ejercicioLoginDaiFront.svg?style=for-the-badge
+[issues-url]: https://github.com/alberinfo/ejercicioLoginDaiFront/issues
 [product-screenshot]: images/screenshot.png
 [React-native.js]: https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
 [React-native-url]: https://reactnative.dev/
