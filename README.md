@@ -121,7 +121,7 @@ Lastly, in order to have the best experience, we recommend utilizing our <a href
    ```sh
    expo start --tunnel
    ```
-   and then open in web by pressing W
+4. and then open in web by pressing W
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
