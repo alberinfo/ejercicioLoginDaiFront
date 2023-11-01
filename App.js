@@ -5,7 +5,7 @@ import Registro from './src/components/registro';
 import Home from './src/components/Home';
 import { createContext, useState } from 'react';
 import userContext from './context';
-import FormUpdatePerfil from "./src/components/FormUpdatePerfil.js"
+import FormPerfil from "./src/components/FormPerfil"
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +23,7 @@ export default function App() {
           <Stack.Screen name="Login" component={Login}/>
           <Stack.Screen name="Registro" component={Registro}/>
           <Stack.Screen name="Home" component={Home}/>
-          <Stack.Screen name="FormUpdatePerfil" component={FormUpdatePerfil}/>
+          <Stack.Screen name="FormPerfil" component={FormPerfil}/>
         </Stack.Navigator>
       </userContext.Provider>
     </NavigationContainer>

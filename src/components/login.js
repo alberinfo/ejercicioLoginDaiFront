@@ -1,14 +1,18 @@
-import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { StyleSheet, Button, Text, View } from 'react-native';
 import { TextInput } from 'react-native-web';
 import { useNavigation } from '@react-navigation/native';
 import userContext from '../../context';
 
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import firebaseApp from '../../firebaseConfig';
+
+const auth = getAuth(firebaseApp);
+
 function Login() {
     const navigation = useNavigation();
 
-    const [user, setUser] = useState("");
+    const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
     const [result, setResult] = useState("");
 
@@ -16,14 +20,9 @@ function Login() {
 
     async function handle(){
       try { 
-        const resp = await axios.post("http://localhost:8080/login", {
-          name: user,
-          pwd: pwd
-        });
+        const resp = await signInWithEmailAndPassword(auth, email, pwd);
 
-        console.log(resp);
-
-        context.setUsuario({name: user, sessionId: resp.data});
+        context.setUsuario(resp.user);
 
         navigation.navigate("Home");
       } catch (e) {
@@ -33,7 +32,7 @@ function Login() {
   
     return (
       <View style={styles.container}>
-        <TextInput placeholder="usuario" onChangeText={(username) => setUser(username)}/>
+        <TextInput placeholder="email" onChangeText={(m) => setEmail(m)}/>
         <TextInput secureTextEntry={true} placeholder="contraseña" onChangeText={(pwd) => setPwd(pwd)} />
         <Button title="Enviar" onPress={handle}/>
   

@@ -1,22 +1,35 @@
 import { useNavigation } from "@react-navigation/native";
-import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { View, StyleSheet, TextInput, Button } from "react-native-web";
 import userContext from "../../context";
 import FormPerfil from "./FormPerfil";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import firebaseApp from "../../firebaseConfig";
+
+const database = getFirestore(firebaseApp);
 
 function Home() {
     const navigation = useNavigation();
 
     const context = useContext(userContext);
 
-    const [shouldPost, setShouldPost] = useState();
+    const [shouldPost, setShouldPost] = useState(true);
 
     useEffect(() => {
         const callerFunc = async () => {
-            const resp = await axios.get(`http://localhost:8080/perfil/${context.usuario.name}`, {headers: {'Authorization': context.usuario.sessionId}});
-            context.setPerfil(resp.data);
-            setShouldPost(!(typeof resp.data === "object"));
+            try {
+                const resp = await getDoc(doc(database, "perfil", context.usuario.uid));
+                
+                context.setPerfil({...resp.data()});
+
+                if(resp.data().username.length === 0) {
+                    setShouldPost(true)
+                } else {
+                    setShouldPost(false);
+                }
+            } catch (e) {
+                return;
+            }
         }
 
         callerFunc();
@@ -29,14 +42,15 @@ function Home() {
                 <FormPerfil></FormPerfil>
                 :
                 <View>
-                    <h1>Bienvenido {context.usuario.name}</h1>
+                    <h1>Bienvenido {context.perfil.username}</h1>
                     <h2>Color de pelo: {context.perfil.colorDePelo}</h2>
                     <h2>Cantidad de amigos: {context.perfil.cantAmigos}</h2>
-                    <Button  title="Update" onPress={() => {setShouldPost(true); navigation.navigate("FormUpdatePerfil")}}/>
+                    <Button title="Update" onPress={() => {setShouldPost(true); navigation.navigate("FormPerfil")}}/>
                 </View>
             }
         </View>
     );
+    return (<>lmao</>);
 }
 
 const styles = StyleSheet.create({
